@@ -5,41 +5,49 @@ public class Artikal {
 	private String naziv;
 	private int sifra;
 	private String opis;
-	private int kolicija;
+	private int kolicina;
 	
 	public String getNaziv() {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if(!naziv.isEmpty()) {
+			this.naziv = naziv;
+		}
 	}
 	public int getSifra() {
 		return sifra;
 	}
 	public void setSifra(int sifra) {
-		this.sifra = sifra;
+		if(sifra>0) {
+			this.sifra = sifra;
+		}
 	}
 	public String getOpis() {
 		return opis;
 	}
 	public void setOpis(String opis) {
-		this.opis = opis;
+		if(!opis.isEmpty()) {
+			this.opis = opis;
+		}
 	}
-	public int getKolicija() {
-		return kolicija;
+	public int getKolicina() {
+		return kolicina;
 	}
-	public void setKolicija(int kolicija) {
-		this.kolicija = kolicija;
+	public void setKolicina(int kolicina) {
+		if(kolicina>0) {
+			this.kolicina = kolicina;
+		}
 	}
 	@Override
 	public String toString() {
-		return "Artikal [naziv=" + naziv + ", sifra=" + sifra + ", opis=" + opis + ", kolicija=" + kolicija + "]";
+		return "Artikal [naziv=" + naziv + ", sifra=" + sifra + ", opis=" + opis + ", kolicija=" + kolicina + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + kolicija;
+		result = prime * result + kolicina;
 		result = prime * result + ((naziv == null) ? 0 : naziv.hashCode());
 		result = prime * result + ((opis == null) ? 0 : opis.hashCode());
 		result = prime * result + sifra;
@@ -54,7 +62,7 @@ public class Artikal {
 		if (getClass() != obj.getClass())
 			return false;
 		Artikal other = (Artikal) obj;
-		if (kolicija != other.kolicija)
+		if (kolicina != other.kolicina)
 			return false;
 		if (naziv == null) {
 			if (other.naziv != null)

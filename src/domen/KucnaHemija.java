@@ -1,5 +1,6 @@
 package domen;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class KucnaHemija extends Artikal {
@@ -11,7 +12,9 @@ public class KucnaHemija extends Artikal {
 	}
 
 	public void setRokTrajanja(Date rokTrajanja) {
-		this.rokTrajanja = rokTrajanja;
+		if(!rokTrajanja.before(new Date())){
+			this.rokTrajanja = rokTrajanja;
+		}
 	}
 
 	@Override
