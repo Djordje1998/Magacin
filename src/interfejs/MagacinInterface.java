@@ -1,5 +1,7 @@
 package interfejs;
 
+import java.util.LinkedList;
+
 import domen.Artikal;
 
 public interface MagacinInterface {
