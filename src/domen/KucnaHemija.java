@@ -12,7 +12,7 @@ public class KucnaHemija extends Artikal {
 	}
 
 	public void setRokTrajanja(Date rokTrajanja) {
-		if(!rokTrajanja.before(new Date())){
+		if (!rokTrajanja.before(new Date())) {
 			this.rokTrajanja = rokTrajanja;
 		}
 	}
@@ -46,7 +46,5 @@ public class KucnaHemija extends Artikal {
 			return false;
 		return true;
 	}
-	
-	
-	
+
 }

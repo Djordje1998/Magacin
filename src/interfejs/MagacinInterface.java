@@ -12,7 +12,7 @@ public interface MagacinInterface {
 	// izbacivanje artikala iz magacina (samo za smanjenje količine artikla)
 	public void izbaciArtikal(Artikal artikal);
 	
-	//pronalaženje (i vraćanje) informacija o artiklu preko šifre (tačne šifre).
+	// pronalaženje (i vraćanje) informacija o artiklu preko šifre (tačne šifre).
 	public Artikal pronadjiArtikal(int sifra);
 	
 }

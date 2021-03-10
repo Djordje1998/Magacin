@@ -8,8 +8,6 @@ public class MagacinImpl implements MagacinInterface {
 
 	private LinkedList<Artikal> artikli = new LinkedList<Artikal>();
 
-	// dodavanje artikala u magacin (novog artikla ili povećanje količine postojećeg artikla)
-
 	@Override
 	public void dodajArtikal(Artikal artikal) {
 		if (artikal != null) {
@@ -27,8 +25,6 @@ public class MagacinImpl implements MagacinInterface {
 			throw new RuntimeException("Artikal ne moze biti null!");
 		}
 	}
-
-	// izbacivanje artikala iz magacina (samo za smanjenje količine artikla)
 
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
@@ -48,8 +44,6 @@ public class MagacinImpl implements MagacinInterface {
 		}
 
 	}
-
-	// pronalaženje (i vraćanje) informacija o artiklu preko šifre (tačne šifre).
 
 	@Override
 	public Artikal pronadjiArtikal(int sifra) {
